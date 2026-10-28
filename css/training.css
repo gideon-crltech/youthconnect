@@ -1,0 +1,506 @@
+/* =====================================================
+   YOUTHCONNECT — TRAINING PAGE
+===================================================== */
+
+.training-page {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(20, 33, 61, 0.04);
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--teal-dark);
+}
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    color: var(--white);
+    background: var(--navy);
+    border-radius: var(--radius-small);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+    background: var(--navy-light);
+}
+
+/* =====================================================
+   TRAINING INTRODUCTION
+===================================================== */
+
+.training-intro {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 55px 0 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--teal-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.training-intro h1 {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    color: var(--navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.training-intro p {
+    max-width: 760px;
+    margin: 0 auto 16px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   TRAINING CATEGORIES
+===================================================== */
+
+.training-categories {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 20px 0 55px;
+}
+
+.training-categories > h2 {
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.training-categories > p {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* =====================================================
+   COURSE SEARCH AND FILTERS
+===================================================== */
+
+.course-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(200px, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+    padding: 22px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+}
+
+.course-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.course-control-group label {
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.course-control-group input,
+.course-control-group select {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-control-group input:focus,
+.course-control-group select:focus {
+    border-color: var(--teal-dark);
+    box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.15);
+}
+
+.course-results-count {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* =====================================================
+   CATEGORY LABELS
+===================================================== */
+
+.course-category-label {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-bottom: 16px;
+    padding: 7px 12px;
+    color: var(--navy);
+    background: #e5f7f5;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.course-category-label.it {
+    color: #14532d;
+    background: #dcfce7;
+}
+
+.course-category-label.finance {
+    color: #854d0e;
+    background: #fef3c7;
+}
+
+.course-category-label.medicine {
+    color: #1e40af;
+    background: #dbeafe;
+}
+
+/* =====================================================
+   COURSE GRID
+===================================================== */
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px rgba(20, 33, 61, 0.12);
+}
+
+.course-card[hidden] {
+    display: none !important;
+}
+
+.course-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    background: #e5f7f5;
+    border-radius: var(--radius-medium);
+    font-size: 1.7rem;
+}
+
+.course-card h3 {
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.course-card > p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.course-topics {
+    margin: 0 0 20px;
+    padding: 14px;
+    color: var(--text);
+    background: var(--background);
+    border-radius: var(--radius-small);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.course-topics strong {
+    color: var(--navy);
+}
+
+.course-topics li {
+    margin-bottom: 9px;
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.course-topics li::marker {
+    color: var(--teal-dark);
+}
+
+.course-card .primary-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* =====================================================
+   NO SEARCH RESULTS
+===================================================== */
+
+.no-courses-message {
+    grid-column: 1 / -1;
+    padding: 35px 20px;
+    color: var(--muted);
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-large);
+    text-align: center;
+    line-height: 1.8;
+}
+
+.no-courses-message[hidden] {
+    display: none;
+}
+
+/* =====================================================
+   SHARED BUTTON
+===================================================== */
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    color: var(--white);
+    background: var(--navy);
+    border: none;
+    border-radius: var(--radius-small);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background: var(--navy-light);
+    transform: translateY(-2px);
+}
+
+.primary-button:focus-visible {
+    outline: 3px solid var(--teal-dark);
+    outline-offset: 3px;
+}
+
+/* =====================================================
+   LEARNING TIPS
+===================================================== */
+
+.learning-tips {
+    width: min(1100px, 90%);
+    margin: 0 auto 55px;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+}
+
+.learning-tips h2 {
+    margin-bottom: 18px;
+    color: var(--navy);
+    font-size: 1.6rem;
+}
+
+.learning-tips ol,
+.learning-tips ul {
+    padding-left: 22px;
+}
+
+.learning-tips li {
+    margin-bottom: 12px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.learning-tips li::marker {
+    color: var(--teal-dark);
+}
+
+/* =====================================================
+   JOBS PROMOTION
+===================================================== */
+
+.training-jobs-promo {
+    width: min(1100px, 90%);
+    margin: 0 auto 60px;
+    padding: 35px;
+    background: var(--navy);
+    border-radius: var(--radius-large);
+    text-align: center;
+}
+
+.training-jobs-promo h2 {
+    margin-bottom: 14px;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.training-jobs-promo p {
+    max-width: 700px;
+    margin: 0 auto 22px;
+    color: #e2e9f3;
+    line-height: 1.8;
+}
+
+.training-jobs-promo .primary-button {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.training-jobs-promo .primary-button:hover {
+    background: #e5f7f5;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    padding: 25px 5%;
+    color: var(--muted);
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 900px) {
+    .course-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .training-intro {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 16px 5%;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .training-intro,
+    .training-categories {
+        width: 90%;
+    }
+
+    .course-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-tips,
+    .training-jobs-promo {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .training-intro h1 {
+        font-size: 2rem;
+    }
+
+    .course-card {
+        padding: 22px;
+    }
+
+    .learning-tips,
+    .training-jobs-promo {
+        padding: 20px;
+    }
+
+    .training-jobs-promo h2 {
+        font-size: 1.5rem;
+    }
+}

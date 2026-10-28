@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore IT, finance, business, and healthcare learning resources on YouthConnect."
+    >
+
+    <title>Skills &amp; Training | YouthConnect</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/training.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                YouthConnect
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="jobs.html">Find Opportunities</a>
+                </li>
+
+                <li>
+                    <a href="training.html" aria-current="page">
+                        Skills &amp; Training
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">My Profile</a>
+                </li>
+
+                <li>
+                    <a href="index.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="register.html" class="register-btn">
+                        Register
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="training-page">
+
+        <!-- Introduction -->
+        <section class="training-intro">
+
+            <p class="eyebrow">LEARN • PRACTISE • GROW</p>
+
+            <h1>Build Skills for Your Future</h1>
+
+            <p>
+                Explore learning resources designed to help you develop
+                knowledge and practical skills for your career journey.
+            </p>
+
+            <p>
+                Whether you are interested in technology, finance,
+                business, or healthcare, you can begin learning online
+                from Namibia and explore opportunities locally and abroad.
+            </p>
+
+        </section>
+
+
+        <!-- Course Catalogue -->
+        <section class="training-categories">
+
+            <h2>Explore Our Learning Paths</h2>
+
+            <p>
+                Browse nine learning paths across three career areas.
+                Choose a subject that interests you and explore the
+                available learning resources.
+            </p>
+
+
+            <!-- Search and Category Filter -->
+            <div class="course-controls">
+
+                <div class="course-control-group">
+
+                    <label for="course-search">
+                        Search courses
+                    </label>
+
+                    <input
+                        type="search"
+                        id="course-search"
+                        placeholder="Search by course or topic..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="course-control-group">
+
+                    <label for="course-category">
+                        Filter by category
+                    </label>
+
+                    <select id="course-category">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="it">
+                            Information Technology
+                        </option>
+
+                        <option value="finance">
+                            Finance &amp; Business
+                        </option>
+
+                        <option value="medicine">
+                            Medicine &amp; Healthcare
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Course Count -->
+            <p
+                class="course-results-count"
+                id="course-results-count"
+                aria-live="polite"
+            >
+                Showing 9 learning paths
+            </p>
+
+
+            <div class="course-container" id="course-container">
+
+
+                <!-- CATEGORY 1: INFORMATION TECHNOLOGY -->
+
+
+                <!-- Course 1: Software Engineering -->
+                <article
+                    class="course-card"
+                    data-category="it"
+                    data-search="software engineering programming coding software development algorithms problem solving"
+                >
+
+                    <span class="course-category-label it">
+                        Information Technology
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        💻
+                    </div>
+
+                    <h3>Software Engineering</h3>
+
+                    <p>
+                        Learn the foundations of designing, building,
+                        testing, and maintaining software applications.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Programming, algorithms, debugging, and software design.
+                    </p>
+
+                    <a
+                        href="https://www.freecodecamp.org/learn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Learning Resources
+                    </a>
+
+                </article>
+
+
+                <!-- Course 2: Web Development -->
+                <article
+                    class="course-card"
+                    data-category="it"
+                    data-search="web development websites frontend html css javascript responsive design"
+                >
+
+                    <span class="course-category-label it">
+                        Information Technology
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🌐
+                    </div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Learn how websites are structured, styled,
+                        and made interactive for users.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        HTML, CSS, JavaScript, and responsive design.
+                    </p>
+
+                    <a
+                        href="https://www.freecodecamp.org/learn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore FreeCodeCamp
+                    </a>
+
+                </article>
+
+
+                <!-- Course 3: Cybersecurity -->
+                <article
+                    class="course-card"
+                    data-category="it"
+                    data-search="cybersecurity cyber security information security networks threats privacy access control"
+                >
+
+                    <span class="course-category-label it">
+                        Information Technology
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🔐
+                    </div>
+
+                    <h3>Cybersecurity</h3>
+
+                    <p>
+                        Understand how digital systems and information
+                        can be protected against common security threats.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Security fundamentals, networks, privacy, and defence.
+                    </p>
+
+                    <a
+                        href="https://skillsforall.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Cisco Learning
+                    </a>
+
+                </article>
+
+
+
+                <!-- CATEGORY 2: FINANCE & BUSINESS -->
+
+
+                <!-- Course 4: Accounting -->
+                <article
+                    class="course-card"
+                    data-category="finance"
+                    data-search="accounting financial records transactions income expenses financial statements"
+                >
+
+                    <span class="course-category-label finance">
+                        Finance &amp; Business
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        📊
+                    </div>
+
+                    <h3>Accounting</h3>
+
+                    <p>
+                        Explore how financial transactions are recorded
+                        and how financial information is organized.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Transactions, financial records, and basic statements.
+                    </p>
+
+                    <a
+                        href="https://www.open.edu/openlearn/money-business"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Accounting Resources
+                    </a>
+
+                </article>
+
+
+                <!-- Course 5: Bookkeeping -->
+                <article
+                    class="course-card"
+                    data-category="finance"
+                    data-search="bookkeeping financial records invoices receipts cash flow income expenses"
+                >
+
+                    <span class="course-category-label finance">
+                        Finance &amp; Business
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🧾
+                    </div>
+
+                    <h3>Bookkeeping</h3>
+
+                    <p>
+                        Learn the basics of maintaining accurate financial
+                        records for individuals and businesses.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Invoices, receipts, income, expenses, and cash flow.
+                    </p>
+
+                    <a
+                        href="https://www.open.edu/openlearn/money-business"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Bookkeeping Resources
+                    </a>
+
+                </article>
+
+
+                <!-- Course 6: Business Administration -->
+                <article
+                    class="course-card"
+                    data-category="finance"
+                    data-search="business administration management communication planning organization office administration"
+                >
+
+                    <span class="course-category-label finance">
+                        Finance &amp; Business
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🏢
+                    </div>
+
+                    <h3>Business Administration</h3>
+
+                    <p>
+                        Discover how organizations coordinate daily
+                        operations, communicate, and manage resources.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Planning, communication, organization, and management.
+                    </p>
+
+                    <a
+                        href="https://www.open.edu/openlearn/money-business"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Business Resources
+                    </a>
+
+                </article>
+
+
+
+                <!-- CATEGORY 3: MEDICINE & HEALTHCARE -->
+
+
+                <!-- Course 7: Nursing -->
+                <article
+                    class="course-card"
+                    data-category="medicine"
+                    data-search="nursing healthcare patient care hygiene communication health education"
+                >
+
+                    <span class="course-category-label medicine">
+                        Medicine &amp; Healthcare
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🩺
+                    </div>
+
+                    <h3>Nursing Fundamentals</h3>
+
+                    <p>
+                        Explore introductory concepts in patient care,
+                        health education, hygiene, and communication.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Patient safety, hygiene, communication, and care principles.
+                    </p>
+
+                    <a
+    href="https://www.open.ac.uk/courses/nursing-healthcare/all-courses/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="primary-button"
+>
+    Explore Nursing Resources
+</a>
+
+                </article>
+
+
+                <!-- Course 8: General Medicine -->
+                <article
+                    class="course-card"
+                    data-category="medicine"
+                    data-search="general medicine doctor human body health disease prevention anatomy physiology"
+                >
+
+                    <span class="course-category-label medicine">
+                        Medicine &amp; Healthcare
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🧬
+                    </div>
+
+                    <h3>Introduction to Human Health</h3>
+
+                    <p>
+                        Learn introductory concepts about the human body,
+                        general health, and disease prevention.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Human biology, health awareness, and disease prevention.
+                    </p>
+
+                    <a
+                        href="https://www.khanacademy.org/science/health-and-medicine"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button"
+                    >
+                        Explore Health Resources
+                    </a>
+
+                </article>
+
+
+                <!-- Course 9: First Aid -->
+                <article
+                    class="course-card"
+                    data-category="medicine"
+                    data-search="first aid emergency response safety injuries basic life support health"
+                >
+
+                    <span class="course-category-label medicine">
+                        Medicine &amp; Healthcare
+                    </span>
+
+                    <div class="course-icon" aria-hidden="true">
+                        🚑
+                    </div>
+
+                    <h3>First Aid Fundamentals</h3>
+
+                    <p>
+                        Learn about emergency preparedness, personal safety,
+                        and the role of first aid in responding to emergencies.
+                    </p>
+
+                    <p class="course-topics">
+                        <strong>Topics:</strong>
+                        Emergency awareness, safety, and basic response principles.
+                    </p>
+
+                  <a
+    href="https://stjohn.org.za/e-learning/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="primary-button"
+>
+    Explore First Aid Training
+</a>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- No Search Results -->
+            <p
+                class="no-courses-message"
+                id="no-courses-message"
+                hidden
+            >
+                No learning paths match your search.
+                Try another keyword or select a different category.
+            </p>
+
+        </section>
+
+
+
+        <!-- Learning Advice -->
+        <section class="learning-tips">
+
+            <h2>How to Get the Most from Your Learning</h2>
+
+            <ol>
+
+                <li>
+                    <strong>Choose a learning path.</strong>
+                    Start with a subject that interests you.
+                </li>
+
+                <li>
+                    <strong>Practise what you learn.</strong>
+                    Apply new knowledge through suitable exercises
+                    and small projects.
+                </li>
+
+                <li>
+                    <strong>Build evidence of your skills.</strong>
+                    Keep examples of your work and record the skills
+                    you develop in your YouthConnect profile.
+                </li>
+
+                <li>
+                    <strong>Check course details.</strong>
+                    Confirm whether resources are free, whether
+                    certificates cost money, and whether assessments
+                    are available.
+                </li>
+
+                <li>
+                    <strong>Understand professional requirements.</strong>
+                    Introductory learning resources do not replace
+                    recognized qualifications, supervised training,
+                    or professional registration where required.
+                </li>
+
+                <li>
+                    <strong>Research opportunities carefully.</strong>
+                    Check employer requirements, eligibility, and
+                    work authorization before applying abroad.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- Job Opportunities Promotion -->
+        <section class="training-jobs-promo">
+
+            <h2>Ready to Explore Opportunities?</h2>
+
+            <p>
+                Explore job opportunities that match your interests
+                and the skills you are developing.
+            </p>
+
+            <a href="jobs.html" class="primary-button">
+                Find Opportunities
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 YouthConnect.
+            Connecting talent with learning and career opportunities.
+        </p>
+
+        <p>
+            Learning resources are provided by external platforms.
+            Course availability, fees, certificates, and entry requirements
+            depend on each provider.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+<script src="js/api.js"></script>
+<script src="js/training.js"></script>
+
+</body>
+</html>

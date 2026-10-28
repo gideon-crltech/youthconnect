@@ -1,0 +1,790 @@
+/* =====================================================
+   YOUTHCONNECT — JOBS AND OPPORTUNITIES PAGE
+===================================================== */
+
+/* Page Base */
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 18px 6%;
+
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(20, 33, 61, 0.04);
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--teal-dark);
+}
+
+.nav-links .register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 17px;
+
+    color: var(--white);
+    background: var(--teal-dark);
+    border-radius: var(--radius-small);
+}
+
+.nav-links .register-btn:hover {
+    color: var(--white);
+    background: var(--navy);
+}
+
+/* =====================================================
+   MAIN PAGE LAYOUT
+===================================================== */
+
+.jobs-page {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+    padding: 35px 0 55px;
+}
+
+/* =====================================================
+   INTRODUCTION SECTION
+===================================================== */
+
+.jobs-intro {
+    margin-bottom: 30px;
+    padding: 36px;
+
+    background: linear-gradient(
+        125deg,
+        var(--navy),
+        var(--navy-light)
+    );
+
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+}
+
+.jobs-intro .eyebrow {
+    margin-bottom: 12px;
+
+    color: #78e1d8;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.jobs-intro h1 {
+    margin-bottom: 16px;
+
+    color: var(--white);
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.25;
+}
+
+.jobs-intro > p:not(.eyebrow) {
+    max-width: 850px;
+    margin-bottom: 14px;
+
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.jobs-intro > p:last-child {
+    margin-bottom: 0;
+}
+
+.jobs-intro strong {
+    color: #8ce8df;
+}
+
+/* =====================================================
+   SEARCH AND FILTER SECTION
+===================================================== */
+
+.job-search-section {
+    margin-bottom: 42px;
+    padding: 27px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: 0 8px 25px rgba(20, 33, 61, 0.04);
+}
+
+.job-search-section h2 {
+    margin-bottom: 22px;
+
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.job-search {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.job-search .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.job-search .form-group label {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.job-search input,
+.job-search select {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 12px 13px;
+
+    color: var(--text);
+    background: #fbfcfe;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    font: inherit;
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.job-search input:focus,
+.job-search select:focus {
+    outline: none;
+    border-color: var(--teal-dark);
+    box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.12);
+}
+
+.job-search button {
+    min-height: 45px;
+    padding: 12px 18px;
+
+    border-radius: var(--radius-small);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.job-search .search-button {
+    color: var(--white);
+    background: var(--teal-dark);
+    border: 1px solid var(--teal-dark);
+}
+
+.job-search .search-button:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+.job-search .back-button {
+    color: var(--navy);
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.job-search .back-button:hover {
+    background: #f0f3f8;
+    border-color: var(--navy);
+}
+
+/* =====================================================
+   RESULTS HEADING
+===================================================== */
+
+.job-results {
+    margin-bottom: 42px;
+}
+
+.job-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+.job-results-heading h2 {
+    color: var(--navy);
+    font-size: 24px;
+}
+
+.job-results-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =====================================================
+   JOB LISTING GRID
+===================================================== */
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* Individual Opportunity Card */
+
+.job-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    padding: 23px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    border-color: #c9e9e6;
+    box-shadow: 0 12px 26px rgba(20, 33, 61, 0.07);
+}
+
+/* Country Label */
+
+.job-country {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 7px 11px;
+
+    color: var(--teal-dark);
+    background: #eaf9f7;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+/* Job Title */
+
+.job-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--navy);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Company Name */
+
+.job-card h4 {
+    margin-bottom: 17px;
+
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Category and Opportunity Type */
+
+.job-category,
+.job-type {
+    display: inline-block;
+    margin: 0 0 9px;
+    padding: 6px 9px;
+
+    color: var(--navy-light);
+    background: #f0f3f8;
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.job-card > p:not(
+    .job-country,
+    .job-category,
+    .job-type,
+    .eligibility-note
+) {
+    margin-bottom: 15px;
+
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Eligibility Information */
+
+.job-card .eligibility-note {
+    margin: 2px 0 20px;
+    padding: 12px;
+
+    color: #725d28;
+    background: #fff9e8;
+    border: 1px solid #f2e7bd;
+    border-radius: 8px;
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.eligibility-note strong {
+    font-weight: 750;
+}
+
+/* View Details Button */
+
+.job-card .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 43px;
+    margin-top: auto;
+    padding: 11px 14px;
+
+    color: var(--white);
+    background: var(--teal-dark);
+    border: 1px solid var(--teal-dark);
+    border-radius: var(--radius-small);
+
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.job-card .primary-button:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+/* Hide Filtered Listings */
+
+.job-card[hidden] {
+    display: none !important;
+}
+
+/* No Results Message */
+
+#noJobsMessage {
+    margin-top: 20px;
+    padding: 22px;
+
+    color: var(--muted);
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-medium);
+
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#noJobsMessage[hidden] {
+    display: none !important;
+}
+
+/* =====================================================
+   TRAINING PROMOTION
+===================================================== */
+
+.jobs-training-promo {
+    padding: 32px;
+    margin-bottom: 10px;
+
+    background: #eaf9f7;
+    border: 1px solid #ccefeb;
+    border-radius: var(--radius-large);
+    text-align: center;
+}
+
+.jobs-training-promo h2 {
+    margin-bottom: 12px;
+
+    color: var(--navy);
+    font-size: 24px;
+}
+
+.jobs-training-promo p {
+    max-width: 650px;
+    margin: 0 auto 22px;
+
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.jobs-training-promo .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 12px 20px;
+
+    color: var(--white);
+    background: var(--teal-dark);
+    border-radius: var(--radius-small);
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.jobs-training-promo .primary-button:hover {
+    background: var(--navy);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    padding: 25px 5%;
+
+    background: var(--white);
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.site-footer p + p {
+    margin-top: 5px;
+}
+
+/* =====================================================
+   TABLET LAYOUT
+===================================================== */
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .job-listings {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================================
+   MOBILE LAYOUT
+===================================================== */
+
+@media (max-width: 650px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .jobs-page {
+        width: 92%;
+        padding-top: 24px;
+    }
+
+    .jobs-intro {
+        padding: 26px 22px;
+    }
+
+    .jobs-intro h1 {
+        font-size: 28px;
+    }
+
+    .job-search-section {
+        padding: 21px;
+    }
+
+    .job-search {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .job-search button {
+        width: 100%;
+    }
+
+    .job-results-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .job-listings {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        padding: 21px;
+    }
+
+    .jobs-training-promo {
+        padding: 26px 20px;
+    }
+
+    .jobs-training-promo h2 {
+        font-size: 22px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .jobs-page *,
+    .jobs-page *::before,
+    .jobs-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .job-card:hover {
+        transform: none;
+    }
+}
+
+/* Match the dashboard navbar */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 5%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(20, 33, 61, 0.04);
+}
+
+.dashboard-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.yc-logo-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    color: var(--navy);
+}
+
+.dashboard-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.dashboard-nav a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+    color: var(--teal-dark);
+}
+
+.dashboard-nav a.active {
+    position: relative;
+}
+
+.dashboard-nav a.active::after {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    height: 2px;
+    background: var(--teal);
+    content: "";
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    color: var(--navy);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    color: var(--white);
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .dashboard-nav {
+        justify-content: flex-start;
+        gap: 18px;
+    }
+}
+/* Original YouthConnect navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--teal-dark);
+}
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    color: var(--white);
+    background: var(--navy);
+    border-radius: var(--radius-small);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+    background: var(--navy-light);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}

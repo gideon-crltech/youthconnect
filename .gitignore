@@ -1,0 +1,19 @@
+﻿# Never publish backend configuration or secrets
+.env
+.env.*
+!.env.example
+
+# Keep the backend and Python environment private
+Backend/
+venv/
+.venv/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+
+# Local development and editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

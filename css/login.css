@@ -1,0 +1,164 @@
+/* =====================================================
+   LOGIN PAGE BACKGROUND
+===================================================== */
+
+.login-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(32, 178, 170, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(20, 33, 61, 0.08),
+            transparent 35%
+        ),
+        var(--background);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+/* =====================================================
+   LOGIN WRAPPER AND CARD
+===================================================== */
+
+.login-wrapper {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+}
+
+.login-card {
+    background: var(--white);
+    border: 1px solid rgba(223, 229, 238, 0.8);
+    border-radius: var(--radius-large);
+
+    padding: 38px 35px;
+
+    box-shadow: var(--shadow-card);
+}
+
+/* =====================================================
+   LOGIN CONTENT
+===================================================== */
+
+.login-content h2 {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.login-description {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.login-content > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+/* =====================================================
+   LOGIN DIVIDER
+===================================================== */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 27px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+}
+
+.divider span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* =====================================================
+   REGISTRATION LINK AND LOGIN FOOTER
+===================================================== */
+
+.register-prompt {
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+.register-prompt a {
+    color: var(--teal-dark);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+.register-prompt a:hover {
+    text-decoration: underline;
+}
+
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.login-footer p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   RESPONSIVE LOGIN DESIGN
+===================================================== */
+
+@media (max-width: 600px) {
+    .login-page {
+        padding: 20px 15px;
+    }
+
+    .login-card {
+        padding: 30px 23px;
+        border-radius: 16px;
+    }
+
+    .brand {
+        margin-bottom: 30px;
+    }
+
+    .brand h1 {
+        font-size: 26px;
+    }
+
+    .login-content h2 {
+        font-size: 23px;
+    }
+
+    .divider span {
+        font-size: 8px;
+    }
+}

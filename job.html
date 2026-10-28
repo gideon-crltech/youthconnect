@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opportunity Details | YouthConnect</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/jobs.css">
+
+    <style>
+        .job-detail {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 34px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-card);
+        }
+
+        .job-detail h1 {
+            margin: 14px 0 8px;
+            color: var(--navy);
+            font-size: clamp(24px, 4vw, 32px);
+            line-height: 1.3;
+        }
+
+        .job-detail .company {
+            margin-bottom: 18px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .job-detail .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .job-detail h2 {
+            margin: 22px 0 10px;
+            color: var(--navy);
+            font-size: 18px;
+        }
+
+        .job-detail p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .job-detail .eligibility-note {
+            margin: 22px 0;
+        }
+
+        .job-detail .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .job-detail .actions a {
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">YouthConnect</a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html" aria-current="page">Find Opportunities</a></li>
+                <li><a href="training.html">Skills &amp; Training</a></li>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="jobs-page">
+
+        <!-- Filled in from the database by js/api.js -->
+        <article class="job-detail" id="jobDetail">
+            <p>Loading opportunity...</p>
+        </article>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 YouthConnect.
+            Connecting Namibian talent with global IT opportunities.
+        </p>
+        <p>
+            Example listings are for demonstration purposes only.
+            Verify all details with the relevant employer before applying.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+/* =====================================================
+   YOUTHCONNECT — REGISTRATION PAGE
+===================================================== */
+
+/* Registration Page Background */
+
+.register-page {
+    min-height: 100vh;
+    padding: 35px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(32, 178, 170, 0.09),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(20, 33, 61, 0.07),
+            transparent 35%
+        ),
+        var(--background);
+}
+
+/* Registration Wrapper */
+
+.register-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Registration Card */
+
+.register-card {
+    padding: 38px;
+
+    background: var(--white);
+    border: 1px solid rgba(223, 229, 238, 0.8);
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow-card);
+}
+
+/* Registration Header */
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header h1 {
+    color: var(--navy);
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.register-card .brand {
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   REGISTRATION PROGRESS INDICATOR
+===================================================== */
+
+.registration-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin: 28px 0 35px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #a0a8b7;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.progress-number {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #edf1f7;
+    color: var(--muted);
+    border-radius: 50%;
+}
+
+.progress-step.active {
+    color: var(--navy);
+}
+
+.progress-step.active .progress-number {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.progress-step.completed .progress-number {
+    background: var(--teal);
+    color: var(--white);
+}
+
+.progress-line {
+    width: 50px;
+    height: 2px;
+    background: var(--border);
+}
+
+/* =====================================================
+   REGISTRATION FORM SECTIONS
+===================================================== */
+
+.registration-section h2 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.registration-section > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.registration-section[hidden] {
+    display: none !important;
+}
+
+.registration-section.active {
+    animation: sectionFadeIn 0.25s ease;
+}
+
+/* Registration Navigation Buttons */
+
+.registration-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.registration-actions button {
+    flex: 1;
+}
+
+/* =====================================================
+   DESTINATION COUNTRY OPTIONS
+===================================================== */
+
+.country-fieldset {
+    border: none;
+    margin: 0 0 22px;
+    padding: 0;
+}
+
+.country-fieldset legend {
+    margin-bottom: 8px;
+
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.country-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.country-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 65px;
+    padding: 13px;
+
+    background: #fbfcfe;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.country-option:hover {
+    border-color: var(--teal);
+}
+
+.country-option:has(input:checked) {
+    background: #eaf9f7;
+    border-color: var(--teal);
+}
+
+.country-option input {
+    accent-color: var(--teal-dark);
+    flex-shrink: 0;
+}
+
+.country-flag {
+    font-size: 23px;
+}
+
+.country-name {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+/* =====================================================
+   REGISTRATION MESSAGES
+===================================================== */
+
+.form-message {
+    margin-top: 18px;
+    padding: 12px 14px;
+
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.form-message.success {
+    color: var(--success);
+    background: #e9f8f0;
+    border: 1px solid #c8eed9;
+}
+
+.form-message.error {
+    color: var(--danger);
+    background: #fff0ee;
+    border: 1px solid #f2d0cb;
+}
+
+/* =====================================================
+   RESPONSIVE REGISTRATION DESIGN
+===================================================== */
+
+@media (max-width: 600px) {
+    .register-page {
+        padding: 20px 12px;
+    }
+
+    .register-card {
+        padding: 27px 20px;
+        border-radius: 16px;
+    }
+
+    .register-header h1 {
+        font-size: 24px;
+    }
+
+    .registration-progress {
+        gap: 8px;
+    }
+
+    .progress-step {
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .progress-number {
+        width: 27px;
+        height: 27px;
+    }
+
+    .progress-line {
+        width: 20px;
+    }
+
+    .country-options {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-actions {
+        flex-direction: column;
+    }
+}
+
+/* =====================================================
+   REGISTRATION ANIMATION
+===================================================== */
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Step number bubble (the markup uses a plain <span>) */
+
+.progress-step > span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #edf1f7;
+    color: var(--muted);
+    border-radius: 50%;
+}
+
+.progress-step > p {
+    margin: 0;
+}
+
+.progress-step.active > span {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.progress-step.completed > span {
+    background: var(--teal);
+    color: var(--white);
+}

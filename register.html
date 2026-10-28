@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account | YouthConnect</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/register.css">
+
+
+</head>
+
+<body class="login-page register-page">
+
+<main class="login-wrapper register-wrapper">
+
+    <section class="login-card register-card">
+
+        <!-- YouthConnect Branding -->
+        <div class="brand">
+
+            <a href="index.html" class="brand-link">
+
+                <div class="brand-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <circle
+                            cx="27"
+                            cy="27"
+                            r="16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="5"
+                        />
+
+                        <path
+                            d="M39 39 L53 53"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="6"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M27 18 L29 24 L35 26 L29 28 L27 34 L25 28 L19 26 L25 24 Z"
+                            fill="#FFFFFF"
+                        />
+
+                    </svg>
+                </div>
+
+                <h1>Youth<span>Connect</span></h1>
+
+            </a>
+
+            <p class="brand-tagline">
+                Discover opportunities. Build your future.
+            </p>
+
+        </div>
+
+        <!-- Registration Heading -->
+        <div class="login-content">
+
+            <h2>Create your account</h2>
+
+            <p class="login-description">
+                Start your journey from Namibia to international IT opportunities.
+            </p>
+
+            <!-- Registration Progress -->
+            <div class="registration-progress">
+
+                <div class="progress-step active"
+                    id="step-indicator-1">
+
+                    <span>1</span>
+                    <p>Personal details</p>
+
+                </div>
+
+                <div class="progress-line"
+                    id="progress-line"></div>
+
+                <div class="progress-step"
+                    id="step-indicator-2">
+
+                    <span>2</span>
+                    <p>Career profile</p>
+
+                </div>
+
+            </div>
+
+            <form id="register-form">
+
+                <!-- SECTION 1: PERSONAL INFORMATION -->
+                <div class="registration-section active"
+                    id="personal-section">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="first-name">
+                                First name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first_name"
+                                placeholder="First name"
+                                autocomplete="given-name"
+                                maxlength="100"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="last-name">
+                                Last name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last_name"
+                                placeholder="Last name"
+                                autocomplete="family-name"
+                                maxlength="100"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="register-email">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Current Location -->
+                    <div class="form-group">
+
+                        <label for="current-location">
+                            Current location
+                        </label>
+
+                        <select
+                            id="current-location"
+                            name="current_location"
+                            required
+                        >
+
+                            <option value="Namibia" selected>
+                                Namibia
+                            </option>
+
+                        </select>
+
+                        <small class="field-help">
+                            YouthConnect is designed for people
+                            currently based in Namibia.
+                        </small>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="login-button"
+                        id="continue-button"
+                    >
+                        Continue <span aria-hidden="true">→</span>
+                    </button>
+
+                </div>
+
+                <!-- SECTION 2: CAREER PROFILE -->
+                <div class="registration-section"
+                    id="career-section"
+                    hidden>
+
+                    <div class="form-group">
+
+                        <label for="career-interest">
+                            Which career interests you?
+                        </label>
+
+                        <select
+                            id="career-interest"
+                            name="career_interest"
+                            required
+                        >
+
+                            <option value="">
+                                Select your career field
+                            </option>
+
+                            <option value="Software Development">
+                                Software Development
+                            </option>
+
+                            <option value="Cybersecurity">
+                                Cybersecurity
+                            </option>
+
+                            <option value="Networking">
+                                Networking
+                            </option>
+
+                            <option value="Data Analysis">
+                                Data Analysis
+                            </option>
+
+                            <option value="IT Support">
+                                IT Support / IT Technician
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Preferred Destination Countries -->
+                    <fieldset class="country-fieldset">
+
+                        <legend>
+                            Where would you like to find opportunities?
+                        </legend>
+
+                        <p class="field-help country-intro">
+                            Select one or more countries.
+                        </p>
+
+                        <div class="country-options">
+
+                            <label class="country-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="destination_countries"
+                                    value="USA"
+                                >
+
+                                <span class="country-flag">🇺🇸</span>
+
+                                <span class="country-name">
+                                    United States
+                                </span>
+
+                            </label>
+
+                            <label class="country-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="destination_countries"
+                                    value="UK"
+                                >
+
+                                <span class="country-flag">🇬🇧</span>
+
+                                <span class="country-name">
+                                    United Kingdom
+                                </span>
+
+                            </label>
+
+                            <label class="country-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="destination_countries"
+                                    value="Germany"
+                                >
+
+                                <span class="country-flag">🇩🇪</span>
+
+                                <span class="country-name">
+                                    Germany
+                                </span>
+
+                            </label>
+
+                            <label class="country-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="destination_countries"
+                                    value="Russia"
+                                >
+
+                                <span class="country-flag">🇷🇺</span>
+
+                                <span class="country-name">
+                                    Russia
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="register-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="register-password"
+                            name="password"
+                            placeholder="At least 8 characters"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm_password"
+                            placeholder="Enter your password again"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                    <p
+                        class="form-message"
+                        id="register-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        Create Account
+                    </button>
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        id="back-button"
+                    >
+                        ← Back to personal details
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- Login Link -->
+            <div class="form-footer">
+
+                <p>
+                    Already have an account?
+                    <a href="index.html">Sign in</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="login-footer">
+
+        <p>
+            &copy; 2026 YouthConnect.
+                Connecting talent with opportunity.
+        </p>
+
+    </footer>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

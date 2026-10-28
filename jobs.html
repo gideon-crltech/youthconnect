@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore IT jobs, internships, graduate programmes, and technical opportunities in the USA, UK, Germany, and Russia."
+    >
+
+    <title>Find IT Opportunities | YouthConnect</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+
+<body>
+
+    <!-- Website Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">YouthConnect</a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html" aria-current="page">Find Opportunities</a></li>
+                <li><a href="training.html">Skills &amp; Training</a></li>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="jobs-page">
+
+        <section class="jobs-intro">
+
+            <p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+
+            <h1>Find Your Next IT Opportunity</h1>
+
+            <p>
+                Discover opportunities in Software Development,
+                Cybersecurity, Networking, Data Analysis, and IT Support.
+                Explore options in the USA, UK, Germany, and Russia.
+            </p>
+
+            <p>
+                <strong>For Namibian applicants:</strong>
+                Always check the employer's eligibility requirements,
+                work authorisation rules, and visa sponsorship information
+                before applying.
+            </p>
+
+        </section>
+
+
+        <!-- Search and Filters -->
+        <section class="job-search-section">
+
+            <h2>Search Opportunities</h2>
+
+            <form class="job-search" id="jobSearchForm">
+
+                <div class="form-group">
+                    <label for="jobKeyword">Keywords</label>
+
+                    <input
+                        type="search"
+                        id="jobKeyword"
+                        name="keyword"
+                        placeholder="e.g. Python, cybersecurity..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="jobCountry">Country</label>
+
+                    <select id="jobCountry" name="country">
+                        <option value="">All Countries</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="germany">Germany</option>
+                        <option value="russia">Russia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobCategory">Career Category</label>
+
+                    <select id="jobCategory" name="category">
+                        <option value="">All IT Categories</option>
+                        <option value="software">Software Development</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="networking">Networking</option>
+                        <option value="data">Data Analysis</option>
+                        <option value="support">IT Support / Technician</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobType">Opportunity Type</label>
+
+                    <select id="jobType" name="type">
+                        <option value="">All Types</option>
+                        <option value="full-time">Full-Time Job</option>
+                        <option value="part-time">Part-Time Job</option>
+                        <option value="internship">Internship</option>
+                        <option value="graduate">Graduate Programme</option>
+                        <option value="training">Training Opportunity</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="search-button">
+                    Search Opportunities
+                </button>
+
+                <button type="reset" class="back-button">
+                    Clear Filters
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Results (loaded from the database by js/api.js) -->
+        <section class="job-results">
+
+            <div class="job-results-heading">
+                <h2>Explore Opportunities</h2>
+
+                <p id="resultsCount" aria-live="polite">
+                    Loading opportunities...
+                </p>
+            </div>
+
+            <div class="job-listings" id="jobListings"></div>
+
+            <p id="noJobsMessage" hidden>
+                No example opportunities match your filters.
+                Try different keywords or clear the filters.
+            </p>
+
+        </section>
+
+
+        <!-- Career Development -->
+        <section class="jobs-training-promo">
+
+            <h2>Need to Build Your Skills First?</h2>
+
+            <p>
+                Explore learning resources and training opportunities
+                to help you prepare for an IT career.
+            </p>
+
+            <a href="training.html" class="primary-button">
+                Explore Skills &amp; Training
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 YouthConnect.
+            Connecting Namibian talent with global IT opportunities.
+        </p>
+
+        <p>
+            Example listings are for demonstration purposes only.
+            Verify all details with the relevant employer before applying.
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+</html>

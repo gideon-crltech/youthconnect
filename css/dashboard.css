@@ -1,0 +1,654 @@
+/* =====================================================
+   YOUTHCONNECT — DASHBOARD
+===================================================== */
+
+.dashboard-page {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* =====================================================
+   HEADER AND NAVIGATION
+===================================================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 16px 5%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(20, 33, 61, 0.04);
+}
+
+.dashboard-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.yc-logo-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    color: var(--navy);
+}
+
+.dashboard-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.dashboard-nav a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+    color: var(--teal-dark);
+}
+
+.dashboard-nav a.active {
+    position: relative;
+}
+
+.dashboard-nav a.active::after {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+
+    height: 2px;
+    background: var(--teal);
+    content: "";
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 17px;
+    color: var(--navy);
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    color: var(--white);
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.dashboard-container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+    padding: 35px 0 50px;
+}
+
+/* =====================================================
+   WELCOME SECTION
+===================================================== */
+
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 30px;
+    padding: 35px;
+
+    color: var(--white);
+    background: linear-gradient(
+        120deg,
+        var(--navy),
+        var(--navy-light)
+    );
+
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+}
+
+.welcome-label {
+    margin-bottom: 12px;
+    color: #78e1d8;
+
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-welcome h1 {
+    margin-bottom: 13px;
+    color: var(--white);
+
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.25;
+}
+
+.dashboard-welcome div:first-child > p:last-child {
+    max-width: 620px;
+    color: rgba(255, 255, 255, 0.83);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.welcome-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+
+    font-size: 48px;
+}
+
+/* =====================================================
+   OPPORTUNITY SEARCH
+===================================================== */
+
+.opportunity-search {
+    margin-bottom: 40px;
+    padding: 27px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: 0 8px 25px rgba(20, 33, 61, 0.04);
+}
+
+.opportunity-search h2 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.opportunity-search > p {
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#opportunity-search-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr auto;
+    align-items: end;
+    gap: 15px;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.search-field label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-field input,
+.search-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+    padding: 11px 12px;
+
+    color: var(--text);
+    background: #fbfcfe;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    font: inherit;
+    font-size: 13px;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+    outline: 2px solid rgba(32, 178, 170, 0.2);
+    border-color: var(--teal-dark);
+}
+
+.search-button {
+    min-height: 45px;
+    padding: 12px 20px;
+
+    color: var(--white);
+    background: var(--teal-dark);
+    border: 1px solid var(--teal-dark);
+    border-radius: var(--radius-small);
+
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.search-button:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+/* =====================================================
+   DASHBOARD SECTIONS
+===================================================== */
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin-bottom: 7px;
+    color: var(--navy);
+    font-size: 23px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.view-all-link {
+    color: var(--teal-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   CAREER FIELD CARDS
+===================================================== */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.career-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 190px;
+    padding: 20px 17px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal);
+    box-shadow: 0 10px 25px rgba(20, 33, 61, 0.07);
+}
+
+.career-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    margin-bottom: 15px;
+
+    background: #eaf9f7;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+.career-card h3 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.career-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   FEATURED OPPORTUNITY CARDS
+===================================================== */
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
+}
+
+.opportunity-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    padding: 22px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-3px);
+    border-color: #c9e9e6;
+    box-shadow: 0 12px 25px rgba(20, 33, 61, 0.07);
+}
+
+.opportunity-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.opportunity-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    background: #eaf9f7;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.opportunity-type {
+    padding: 6px 9px;
+
+    color: var(--teal-dark);
+    background: #eaf9f7;
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 750;
+    text-align: center;
+}
+
+.opportunity-card h3 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.company-name {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.opportunity-location {
+    margin-bottom: 15px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.opportunity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+.opportunity-tags span {
+    padding: 6px 9px;
+
+    color: var(--navy-light);
+    background: #f0f3f8;
+    border-radius: 6px;
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.eligibility-note {
+    margin-bottom: 18px;
+    padding: 11px;
+
+    color: #725d28;
+    background: #fff9e8;
+    border: 1px solid #f2e7bd;
+    border-radius: 8px;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.apply-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    margin-top: auto;
+    padding: 11px 14px;
+
+    color: var(--teal-dark);
+    background: var(--white);
+    border: 1px solid var(--teal-dark);
+    border-radius: var(--radius-small);
+
+    font-size: 12px;
+    font-weight: 750;
+    text-align: center;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.apply-button:hover {
+    color: var(--white);
+    background: var(--teal-dark);
+    border-color: var(--teal-dark);
+}
+
+/* =====================================================
+   TRAINING BANNER
+===================================================== */
+
+.training-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 32px;
+    margin-bottom: 10px;
+
+    background: #eaf9f7;
+    border: 1px solid #ccefeb;
+    border-radius: var(--radius-large);
+}
+
+.training-banner h2 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 23px;
+}
+
+.training-banner p {
+    max-width: 560px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.training-button {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: 12px 22px;
+
+    color: var(--white);
+    background: var(--navy);
+    border-radius: var(--radius-small);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.training-button:hover {
+    background: var(--navy-light);
+}
+
+/* =====================================================
+   NO RESULTS MESSAGE
+===================================================== */
+
+.no-results {
+    margin-top: 20px;
+    padding: 22px;
+
+    color: var(--muted);
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-medium);
+
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.dashboard-footer {
+    padding: 25px 5%;
+
+    background: var(--white);
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+    .career-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .opportunity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #opportunity-search-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .dashboard-nav {
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    .dashboard-welcome {
+        padding: 26px 22px;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+
+    .training-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .career-grid,
+    .opportunity-grid,
+    #opportunity-search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

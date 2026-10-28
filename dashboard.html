@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | YouthConnect</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body class="dashboard-page">
+
+<!-- Dashboard Header -->
+<header class="dashboard-header">
+
+<span class="dashboard-logo">
+    <svg
+        class="yc-logo-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        fill="none"
+        aria-hidden="true"
+    >
+        <circle
+            cx="26"
+            cy="26"
+            r="16"
+            stroke="currentColor"
+            stroke-width="5"
+        />
+
+    <path
+        d="M38 38 L53 53"
+        stroke="currentColor"
+        stroke-width="6"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M26 16 L28.5 23.5 L36 26 L28.5 28.5 L26 36 L23.5 28.5 L16 26 L23.5 23.5 Z"
+        fill="#20B2AA"
+    />
+
+    <path
+        d="M43 8 L44.5 12.5 L49 14 L44.5 15.5 L43 20 L41.5 15.5 L37 14 L41.5 12.5 Z"
+        fill="#20B2AA"
+    />
+</svg>
+
+
+</span>
+
+
+    <nav class="dashboard-nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="jobs.html">Find Jobs</a>
+        <a href="training.html">Skills &amp; Training</a>
+        <a href="profile.html">My Profile</a>
+    </nav>
+
+    <button type="button" class="logout-button" id="logout-button"> Log out </button>
+</header>
+
+<!-- Main Dashboard Content -->
+<main class="dashboard-container">
+
+    <!-- Welcome Section -->
+    <section class="dashboard-welcome">
+        <div>
+            <p class="welcome-label">YOUR FUTURE STARTS HERE</p>
+
+            <h1>Welcome to YouthConnect!</h1>
+
+            <p>
+                Discover IT and Computer Science opportunities
+                and take the next step in your career.
+            </p>
+        </div>
+
+        <div class="welcome-icon">🚀</div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="opportunity-search">
+
+        <h2>Find your next opportunity</h2>
+
+        <p>
+            Explore opportunities in the USA, UK, Germany and Russia.
+        </p>
+
+        <form id="opportunity-search-form">
+
+            <div class="search-field">
+                <label for="keyword">Job title or keyword</label>
+
+                <input
+                    type="search"
+                    id="keyword"
+                    placeholder="e.g. Software Developer"
+                >
+            </div>
+
+            <div class="search-field">
+                <label for="country">Destination country</label>
+
+                <select id="country">
+                    <option value="">All countries</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Russia">Russia</option>
+                </select>
+            </div>
+
+            <div class="search-field">
+                <label for="career">Career field</label>
+
+                <select id="career">
+                    <option value="">All IT fields</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Data Analysis">Data Analysis</option>
+                    <option value="IT Support">IT Support</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-button">
+                Search
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Opportunity Categories -->
+    <section class="dashboard-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Explore career fields</h2>
+                <p>Choose an area that interests you.</p>
+            </div>
+        </div>
+
+        <div class="career-grid">
+
+            <a href="jobs.html" class="career-card">
+                <span class="career-icon">💻</span>
+                <h3>Software Development</h3>
+                <p>Build applications and websites.</p>
+            </a>
+
+            <a href="jobs.html" class="career-card">
+                <span class="career-icon">🔐</span>
+                <h3>Cybersecurity</h3>
+                <p>Help protect systems and data.</p>
+            </a>
+
+            <a href="jobs.html" class="career-card">
+                <span class="career-icon">🌐</span>
+                <h3>Networking</h3>
+                <p>Connect computers and networks.</p>
+            </a>
+
+            <a href="jobs.html" class="career-card">
+                <span class="career-icon">📊</span>
+                <h3>Data Analysis</h3>
+                <p>Turn information into insights.</p>
+            </a>
+
+            <a href="jobs.html" class="career-card">
+                <span class="career-icon">🛠️</span>
+                <h3>IT Support</h3>
+                <p>Help people solve technical problems.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Featured Opportunities -->
+    <section class="dashboard-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Featured opportunities</h2>
+                <p>Example listings to demonstrate how YouthConnect will work.</p>
+            </div>
+
+            <a href="jobs.html" class="view-all-link">
+                View all jobs →
+            </a>
+        </div>
+
+        <div class="opportunity-grid" id="opportunity-list">
+
+            <article
+                class="opportunity-card"
+                data-country="Germany"
+                data-career="Software Development"
+            >
+                <div class="opportunity-top">
+                    <span class="opportunity-icon">💻</span>
+                    <span class="opportunity-type">Example listing</span>
+                </div>
+
+                <h3>Junior Software Developer</h3>
+
+                <p class="company-name">Example Technology Company</p>
+
+                <p class="opportunity-location">📍 Germany</p>
+
+                <div class="opportunity-tags">
+                    <span>Software Development</span>
+                    <span>Entry Level</span>
+                </div>
+
+                <p class="eligibility-note">
+                    Eligibility and visa sponsorship: not verified.
+                    Check the employer's official listing.
+                </p>
+
+                <a href="jobs.html" class="apply-button">
+                    Explore opportunities
+                </a>
+            </article>
+
+            <article
+                class="opportunity-card"
+                data-country="UK"
+                data-career="Cybersecurity"
+            >
+                <div class="opportunity-top">
+                    <span class="opportunity-icon">🔐</span>
+                    <span class="opportunity-type">Example listing</span>
+                </div>
+
+                <h3>Cybersecurity Intern</h3>
+
+                <p class="company-name">Example Security Company</p>
+
+                <p class="opportunity-location">📍 United Kingdom</p>
+
+                <div class="opportunity-tags">
+                    <span>Cybersecurity</span>
+                    <span>Internship</span>
+                </div>
+
+                <p class="eligibility-note">
+                    International applicant eligibility and visa
+                    requirements must be checked.
+                </p>
+
+                <a href="jobs.html" class="apply-button">
+                    Explore opportunities
+                </a>
+            </article>
+
+            <article
+                class="opportunity-card"
+                data-country="USA"
+                data-career="Data Analysis"
+            >
+                <div class="opportunity-top">
+                    <span class="opportunity-icon">📊</span>
+                    <span class="opportunity-type">Example listing</span>
+                </div>
+
+                <h3>Junior Data Analyst</h3>
+
+                <p class="company-name">Example Analytics Company</p>
+
+                <p class="opportunity-location">📍 United States</p>
+
+                <div class="opportunity-tags">
+                    <span>Data Analysis</span>
+                    <span>Entry Level</span>
+                </div>
+
+                <p class="eligibility-note">
+                    This is a demonstration card, not a verified vacancy.
+                </p>
+
+                <a href="jobs.html" class="apply-button">
+                    Explore opportunities
+                </a>
+            </article>
+
+        </div>
+
+        <p id="no-opportunities" class="no-results" hidden>
+            No example opportunities match your search. Try different filters.
+        </p>
+
+    </section>
+
+    <!-- Training Promotion -->
+    <section class="training-banner">
+        <div>
+            <h2>Build skills. Open doors.</h2>
+
+            <p>
+                Explore training resources to help prepare for your
+                next opportunity in technology.
+            </p>
+        </div>
+
+        <a href="training.html" class="training-button">
+            Explore Training
+        </a>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="dashboard-footer">
+    <p>
+        &copy; 2026 YouthConnect.
+        Connecting Namibian talent with global opportunities.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/api.js"></script>
+<script>
+    document.getElementById("logout-button").addEventListener("click", function () {
+        YouthConnectAPI.logout();
+    });
+
+    document.addEventListener("DOMContentLoaded", async function () {
+        try {
+            const user = await YouthConnectAPI.getCurrentUser();
+
+            document.querySelector(".dashboard-welcome h1").textContent =
+            `Welcome, ${user.first_name}!`;
+            
+        } catch (error) {
+            console.error("Could not load profile:", error.message);
+        }
+    });
+</script>
+
+
+</body>
+</html>
